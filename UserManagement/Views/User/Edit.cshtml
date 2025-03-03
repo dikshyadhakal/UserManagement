@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@* @using UserManagement.Domain.Entities.User;
+@model User; *@
+@model UserManagement.Domain.ViewModels.AddUserViewModel
+
+<h1>Edit User</h1>
+
+@if(Model is null)
+{
+    <p>No Student was found using this Id</p>
+}
+else
+{
+
+
+    <form method="post">
+
+        <div class="mt-3">
+            <label class="form-label">Id</label>
+            <input type="text" class="form-control" asp-for="Id" readonly />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">FirstName</label>
+            <input type="text" class="form-control" asp-for="FirstName" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">LastName</label>
+            <input type="text" class="form-control" asp-for="LastName" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" asp-for="Email" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">ContactNumber</label>
+            <input type="text" class="form-control" asp-for="ContactNumber" />
+        </div>
+
+        <div class=" mt-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+}
