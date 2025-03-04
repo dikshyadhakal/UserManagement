@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UserManagement.Domain.Entities.User;
+using UserManagement.Domain.Entities;
+using UserManagement.Domain.ViewModels;
 namespace UserManagement.Infrastructure.Data
 {
     public class ApplicationDbContext : DbContext
@@ -8,7 +9,7 @@ namespace UserManagement.Infrastructure.Data
         {
 
         }
-        public DbSet<User> Users { get; set; }
+        public DbSet<User1> Users { get; set; }
     }
 }
 

@@ -3,10 +3,9 @@
 *@
 @{
   }
-
-@* @model List<UserManagement.Domain.Entities.User> *@
-
-<h1>All Users</h1>
+@* @using UserManagement.Domain.ViewModels; *@
+@model List<UserManagement.Domain.Entities.User1> 
+<h1> Users</h1>
 
 <table class="table">
     <thead>
@@ -14,9 +13,11 @@
             <th>ID</th>
             <th>FirstName</th>
             <th>LastName</th>
+            <th>Email</th>
             <th>ContactNumber</th>
             <th></th>
         </tr>
+        </thead>
         <tbody>
             @foreach(var user in Model)
             {
@@ -27,11 +28,11 @@
                     <td>@user.Email</td>
                     <td>@user.ContactNumber</td>
                     <td>
-                        <a>Edit </a>
+                        <a class="btn btn-primary" asp-controller="User" asp-action="Edit" asp-route-id="@user.Id">Edit </a>
                     </td>
 
                 </tr>
             }
         </tbody>
-    </thead>
+     
 </table>
